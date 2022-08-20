@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+    <h1> home</h1>
+    <p>
+        <%= homeDesc %>
+    </p>
+
+    <% for(var i=0;i<posts.length;i++){ %>
+        <form class="/delete" method="post">
+
+            <h2>
+                <%= posts[i].title %>
+            </h2>
+            <p>
+
+                <%= posts[i].desc.substring(0,100) + "..." %>
+                    <a href="/posts/<%= posts[i].title %>">read more</a>
+
+                    <img src="/img/bin.png" alt="img" class="del_img" onclick="">
+            </p>
+        </form>
+        <% }%>
+
+
+
+            <%- include("partials/footer") -%>
